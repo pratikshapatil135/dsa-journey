@@ -13,7 +13,7 @@ class QueueUsingStacks:
                 self.stack2.append(self.stack1.pop())
 
         if not self.stack2:
-            return None
+            return None.
 
         return self.stack2.pop()
 
