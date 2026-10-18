@@ -1,0 +1,26 @@
+
+# Day 42: Maximum Depth of a Binary Tree
+
+## Problem
+Find the maximum depth of a binary tree.
+
+## Approach
+1. If the root is None, return 0.
+2. Calculate the left subtree depth recursively.
+3. Calculate the right subtree depth recursively.
+4. Return 1 plus the larger depth.
+
+## Example
+The longest path is 1 -> 2 -> 4 -> 5.
+
+## Output
+Maximum depth: 4
+
+## Time Complexity
+O(n), where n is the number of nodes.
+
+## Space Complexity
+O(h), where h is the height of the tree, due to recursion.
+
+## Key Learning
+The maximum depth is one plus the maximum depth of the left and right subtrees.
