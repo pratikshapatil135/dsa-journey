@@ -1,0 +1,28 @@
+
+# Day 43: Check Identical Binary Trees
+
+## Problem
+Check whether two binary trees have the same structure and node values.
+
+## Approach
+1. If both nodes are None, return True.
+2. If only one node is None, return False.
+3. If their values differ, return False.
+4. Recursively compare their left subtrees.
+5. Recursively compare their right subtrees.
+6. Return True only if both subtrees match.
+
+## Example
+Both trees contain the values 1, 2, and 3 in the same structure.
+
+## Output
+Are trees identical: True
+
+## Time Complexity
+O(n), where n is the number of nodes when the trees have matching structure.
+
+## Space Complexity
+O(h), where h is the maximum tree height, due to recursion.
+
+## Key Learning
+Two binary trees are identical only when their structures and corresponding node values match.
