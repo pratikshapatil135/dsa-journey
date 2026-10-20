@@ -1,0 +1,42 @@
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+def is_mirror(left, right):
+    if left is None and right is None:
+        return True
+
+    if left is None or right is None:
+        return False
+
+    if left.value != right.value:
+        return False
+
+    return (
+        is_mirror(left.left, right.right)
+        and is_mirror(left.right, right.left)
+    )
+
+
+def is_symmetric(root):
+    if root is None:
+        return True
+
+    return is_mirror(root.left, root.right)
+
+
+# Create a symmetric binary tree
+root = Node(1)
+root.left = Node(2)
+root.right = Node(2)
+
+root.left.left = Node(3)
+root.left.right = Node(4)
+root.right.left = Node(4)
+root.right.right = Node(3)
+
+print("Is tree symmetric:", is_symmetric(root))
