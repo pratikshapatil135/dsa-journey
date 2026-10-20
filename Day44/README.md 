@@ -1,0 +1,28 @@
+
+# Day 44: Check Symmetric Binary Tree
+
+## Problem
+Determine whether a binary tree is symmetric around its center.
+
+## Approach
+1. If the root is None, return True.
+2. Compare the root's left and right subtrees.
+3. Check whether both nodes are None.
+4. If only one node is None or their values differ, return False.
+5. Compare the outer children and inner children recursively.
+
+## Example
+A tree with root 1, children 2 and 2, and mirrored
+children 3, 4, 4, 3 is symmetric.
+
+## Output
+Is tree symmetric: True
+
+## Time Complexity
+O(n), where n is the number of nodes.
+
+## Space Complexity
+O(h), where h is the height of the tree, due to recursion.
+
+## Key Learning
+A symmetric tree is a mirror image of itself.
