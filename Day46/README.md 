@@ -1,0 +1,28 @@
+
+# Day 46: Level Order Traversal of a Binary Tree
+
+## Problem
+Traverse a binary tree level by level, from left to right.
+
+## Approach
+1. Return an empty list if the root is None.
+2. Insert the root into a queue.
+3. Remove the front node from the queue.
+4. Add its value to the result list.
+5. Insert its left and right children into the queue.
+6. Repeat until the queue is empty.
+
+## Data Structure
+Queue (FIFO)
+
+## Example Output
+Level order traversal: [1, 2, 3, 4, 5, 6]
+
+## Time Complexity
+O(n), where n is the number of nodes.
+
+## Space Complexity
+O(n), for the queue and result list.
+
+## Key Learning
+Level order traversal uses a queue to visit nodes level by level.
