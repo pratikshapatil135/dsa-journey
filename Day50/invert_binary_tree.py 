@@ -1,0 +1,43 @@
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+def invert_tree(root):
+    if root is None:
+        return None
+
+    # Swap left and right children
+    root.left, root.right = root.right, root.left
+
+    # Invert both subtrees
+    invert_tree(root.left)
+    invert_tree(root.right)
+
+    return root
+
+
+def inorder(root):
+    if root is not None:
+        inorder(root.left)
+        print(root.value, end=" ")
+        inorder(root.right)
+
+
+# Create a binary tree
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+
+print("Before inversion:")
+inorder(root)
+
+invert_tree(root)
+
+print("\nAfter inversion:")
+inorder(root)
